@@ -7,7 +7,7 @@ function PostList() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/blogposts')
+    axios.get('http://localhost:8080/api/blogposts')
       .then(response => setPosts(response.data))
       .catch(error => console.error('Error fetching posts:', error));
   }, []);
